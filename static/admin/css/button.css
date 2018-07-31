@@ -1,0 +1,12 @@
+.btn, .btn-floating{
+    background-color: #5a5a55 !important;
+}
+
+.btn:hover, .btn-floating:hover{
+    background-color: #5a5a55 !important;
+    color: #ffaa2a !important;
+}
+
+.page-footer{
+    background-color: #5a5a55;
+}

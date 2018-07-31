@@ -1,0 +1,89 @@
+body{
+    background-color: #fff7dc;
+}
+
+/******************************************************************/
+/*--------------------------- header main ------------------------*/
+/*******************************************************************/
+nav{
+    background-color: #654236;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: 10vh;
+    line-height: 10vh;
+}
+nav > .nav-wrapper{
+    height: 100%;
+    line-height: inherit;
+}
+nav > .nav-wrapper > a{
+    height:inherit;
+}
+nav > .nav-wrapper > ul.left{
+    height:inherit;
+    line-height: inherit;
+}
+nav > .nav-wrapper > a > h5{
+    display: inline-block;
+    vertical-align: middle;
+	margin: 14px 0 16px;
+}
+nav > .nav-wrapper > ul.left > li{
+    /*padding: 3px;*/
+    height:inherit;
+}
+nav > .nav-wrapper > ul.left:nth-of-type(2) > li > a{
+    height: inherit;
+}
+nav > .nav-wrapper > ul.left:nth-of-type(2) > li > a:hover{
+    background-color: transparent;
+}
+nav > .nav-wrapper > ul.left:nth-of-type(2) > li > a > img{
+    height: 8vh;
+    margin: 6px 3px 3px 6px;
+}
+nav > .nav-wrapper > ul.left > li > h5{
+    margin: 1.6rem 0.5em;
+}
+nav > .nav-wrapper > ul.left > li > a.button-collapse{
+    height: inherit;
+    line-height: inherit;
+}
+nav > .nav-wrapper > ul.left > li > a.button-collapse > i{
+    height: inherit;
+    line-height: inherit;
+}
+nav > .nav-wrapper > ul.right{
+    height: inherit;
+    line-height: inherit;
+}
+nav > .nav-wrapper > ul.right > li{
+    line-height: inherit;
+    height: inherit;
+    text-transform: uppercase;
+}
+nav > .nav-wrapper > ul.right > li > a > i{
+    height: inherit;
+        line-height: inherit;
+}
+@media only screen and (max-width: 601px){
+    nav > .nav-wrapper, nav > .nav-wrapper > i, nav > a.button-collapse, nav > a.button-collapse > i{
+        height: inherit;
+        line-height: inherit;
+    }
+}
+
+/*----------------------------- Slide Out ------------------------*/
+ul#slide-out > li{
+	border-bottom: 1px solid #EFC849;
+}
+
+ul#slide-out > li > a > i{
+	color: #654236;
+}
+
+#attend{
+    font-size: 10px !important;
+    padding: 0px;!important;
+}

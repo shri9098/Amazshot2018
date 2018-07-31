@@ -1,0 +1,111 @@
+#main_content .row{
+    margin-bottom: 0;
+}
+#main_content > .row:first-of-type .card {
+    border:  1px solid #ffd74f;
+    border-radius: 25px;
+}
+#main_content > .row:first-of-type .card-content{
+    padding: 5px;
+}
+#main_content > .row:first-of-type .card-content > h4{
+    font-size: 20px;
+    margin: 0.2em 0;
+}
+/*---nth col of id 'dashboard_col' ..change it's child's card back color --*/
+.row .col#dashboard_col:nth-child(1) .card#dashboard_card{
+    background-color: #b9ffae;
+}
+.row .col#dashboard_col:nth-child(2) .card#dashboard_card{
+    background-color: #ecffa9;
+}
+.row .col#dashboard_col:nth-child(3) .card#dashboard_card{
+    background-color: #ffe6a3;
+}
+.row .col#dashboard_col:nth-child(4) .card#dashboard_card{
+    background-color: #ffc8b2;
+}
+.row .col#dashboard_col:nth-child(5) .card#dashboard_card{
+    background-color: #debdf3;
+}
+.row .col#dashboard_col:nth-child(6) .card#dashboard_card{
+    background-color: #d4f7ff;
+}
+.row .col#dashboard_col:nth-child(7) .card#dashboard_card{
+    background-color: rgba(14, 153, 255, 0.25);
+}
+.card#dashboard_card{
+    overflow-y: hidden;
+}
+/*---1st Card content inside dashboard_card--*/
+.card#dashboard_card .card-content:nth-child(1){
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 0;
+}
+.card#dashboard_card .card-content:nth-child(1)  h3{
+    margin: 0.1em 0;
+    text-shadow: 1px 2px 7px #ffffff;
+    color: black;
+}
+/*---2nd Card content inside dashboard_card--*/
+.card#dashboard_card .card-content:nth-child(2){
+    padding: 5px;
+}
+.card#dashboard_card p{
+    line-height: 17px;
+}
+
+/***************************************/
+/********** p (#divider) ****************/
+/***************************************/
+p#divider{
+    text-align: center;
+    background-color: #654236;
+    color: white;
+    padding: 0.2em 0;
+    letter-spacing: 1.7px;
+    word-spacing: 10px;
+}
+/*p#divider:before,*/
+/*p#divider:after*/
+/*{*/
+    /*content: "";*/
+    /*background-color: green;*/
+    /*height: 1px;*/
+    /*display: inline-block;*/
+    /*width: 35%;*/
+    /*vertical-align: middle;*/
+    /*margin: 0 2%;*/
+/*}*/
+
+/***************************************/
+/********** row_subscription ************/
+/***************************************/
+#row_subscription .card{
+    margin: 0;
+}
+#row_subscription p{
+    line-height: 17px;
+}
+
+/*---1st Card content inside row_subscription--*/
+#row_subscription .card > .card-content:nth-child(1){
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 0;
+}
+#row_subscription .card > .card-content:nth-child(1)  h3{
+    margin: 0.1em 0;
+    text-shadow: 1px 2px 7px #ffffff;
+    color: black;
+}
+/*---2nd Card content inside row_subscription--*/
+#row_subscription .card > .card-content:nth-child(2){
+    padding: 5px;
+}
+
+#row_subscription .col:nth-of-type(1) .card-content{
+    border-right:1px solid lightgrey;
+    border-radius: 0;
+}

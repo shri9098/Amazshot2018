@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <!-- Compiled and minified CSS -->
+    <link type="text/css" rel="stylesheet" href="/static/home/css/style.css?i={{ timestamp }}" media="screen,projection"/>
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109982357-1"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="/static/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/static/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/static/admin/emp_details/script.js?i={{ timestamp }}"></script>
+    <!-- Compiled and minified JavaScript -->
+</head>
+{#<script>#}
+{#    var host = window.location.hostname;#}
+{#    if(host != "127.0.0.1" &amp;&amp; host != "localhost"){#}
+{#        window.dataLayer = window.dataLayer || [];#}
+{#        function gtag(){dataLayer.push(arguments);}#}
+{#        gtag('js', new Date());#}
+{##}
+{#        gtag('config', 'UA-109982357-1');#}
+{#    }#}
+{#</script>#}
+<body>
+<nav>
+    <div class="nav-wrapper" style="background-color:  #654236;!important;">
+        <ul class="left show-on-small">
+            <li>
+                <a href="" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            </li>
+        </ul>
+        <ul class="left hide-on-med-and-down">
+            <li><a href="/"><img src="/static/media/logo.gif" height="60px" width="100px" alt="Logo"/></a> </li>
+            <li><h5>Amazshot Studio</h5></li>
+        </ul>
+        <ul class="right hide-on-med-and-down show-on-large">
+            <li><a href="/emp_registration/">Registration</a></li>
+            <li><a href="/admin/logout/">Logout</a></li>
+        </ul>
+        <ul class="right hide-on-large-only show-on-small">
+            <li><a href="/emp_registration/">Registration</a></li>
+            <li><a href="/admin/logout/">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<table class="centered" id="main_content">
+    <thead>
+    <tr>
+        <th>Sno.</th>
+        <th>Employee Id</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Joining Date</th>
+        <th>Contact No.</th>
+        <th>Get more details</th>
+    </tr>
+    </thead>
+
+    <tbody id="employee_details_list">
+
+    {% for employee in emp_details_list %}
+        <tr>
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{ employee.employee_id }}</td>
+            <td>{{ employee.first_name }}{{ employee.last_name }}</td>
+            <td>{{ employee.designation }}</td>
+            <td>{{ employee.joining_date }}</td>
+            <td>{{ employee.number }}</td>
+            <td><button class="btn waves-effect waves-red" onclick="GetDetail('{{employee.employee_id }}')" name="action">Click here</button>
+            </td>
+        </tr>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<!-- each employee details method -->
+<div class="row" id="openEmpDetail" style="padding-top: 5px;!important;">
+{#    <div class="col s8">#}
+{#        <table class="centered">#}
+{#            <thead style="background-color: #ffd84e"><tr>#}
+{#                <th>Name</th>#}
+{#                <th>Designation</th>#}
+{#                <th>Joining Date</th>#}
+{#            </tr>#}
+{#            </thead>#}
+{#            <tbody>#}
+{#            <tr>#}
+{#                <td>response_json</td>#}
+{#                <td>response_json </td>#}
+{#                <td>response_json </td>#}
+{#            </tr>#}
+{#            </tbody>#}
+{#            <thead style="background-color: #ffd84e">#}
+{#            <tr>#}
+{#                <th>Mobile</th>#}
+{#                <th>Email Id</th>#}
+{#                <th>Address</th>#}
+{#            </tr>#}
+{#            </thead>#}
+{#            <tbody>#}
+{#            <tr>#}
+{#                <td>response_json </td>#}
+{#                <td>response_json </td>#}
+{#                <td>response_json </td>#}
+{#            </tr>#}
+{#            </tbody>#}
+{#            <thead style="background-color: #ffd84e">#}
+{#            <tr>#}
+{#                <th>Father Name</th>#}
+{#                <th>Mother Name</th>#}
+{#                <th>Dob</th>#}
+{#            </tr>#}
+{#            </thead>#}
+{#            <tbody>#}
+{#            <tr>#}
+{#                <td>response_json </td>#}
+{#                <td>response_json </td>#}
+{#                <td>response_json </td>#}
+{#            </tr>#}
+{#            </tbody>#}
+{#            <thead style="background-color: #ffd84e">#}
+{#            <tr>#}
+{#                <th>Gender</th>#}
+{#                <th>Blood Group</th>#}
+{#                <th>Type</th>#}
+{#            </tr>#}
+{#            </thead>#}
+{#            <tbody>#}
+{#            <tr>#}
+{#                <td>response_json </td>#}
+{#                <td>response_json </td>#}
+{#                <td>response_json </td>#}
+{#            </tr>#}
+{#            </tbody>#}
+{#        </table>#}
+{#    </div>#}
+{#    <div class="col s4">#}
+{#        <div class="row">#}
+{#            <div class="col s12 m7">#}
+{#                <div class="card" style="padding-top: 2px;right: auto;left: 100px">#}
+{#                    <div style="width: 40%;text-align: right">#}
+                        {#                        <img src="/static/media/{{ response.image }}" height="175px" width="150px" style="border: 2px solid #bebebe"/>#}
+{#                        <img src="/static/media/emp_images/AMZ004/Screenshot_from_2018-07-20_12-16-40.png" height="175px" width="150px" style="border: 2px solid #bebebe"/>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="row">#}
+{#            <div class="col s12 m7">#}
+{#                <div class="card" style="padding-top: 0px;right: auto;left: 100px">#}
+{#                      <h5 style="color: #ffaa2a;text-align: center">Attendance </h5>#}
+{#                    <table class="highlight" width="100%">#}
+{#                        <tr>#}
+{#                            <td>Total Working Days</td>#}
+{#                            <td>21</td>#}
+{#                        </tr>#}
+{#                        <tr>#}
+{#                            <td>Total Present</td>#}
+{#                            <td>19</td>#}
+{#                        </tr>#}
+{#                        <tr>#}
+{#                            <td>Total Absent</td>#}
+{#                            <td>1</td>#}
+{#                        </tr>#}
+{#                        <tr>#}
+{#                            <td>Total Leaves</td>#}
+{#                            <td>0</td>#}
+{#                        </tr>#}
+{#                    </table>#}
+{#                    </table>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+</div>
+
+
+{#<div id="openEmpDetail">#}
+{#    <div class="modal-content" id="get_more_details">#}
+{#        <div style="width: 70%">#}
+{#            <div style="width: 30%;text-align: right">#}
+{#                <img src="/static/media/{{ response.image }}" height="175px" width="150px" style="border: 2px solid #bebebe"/>#}
+{#                <img src="/static/media/emp_images/AMZ004/Screenshot_from_2018-07-20_12-16-40.png" height="175px" width="150px" style="border: 2px solid #bebebe"/>#}
+{#            </div>#}
+{#            <table class="highlight" width="100%">#}
+{#                <thead style="padding: 3px;height: auto;width: 100%;background-color: #ffd84e">#}
+{#                <tr style="width: 100%">#}
+{#                    <td width="10%">Emp ID</td>#}
+{#                    <td width="30%">Name</td>#}
+{#                    <td width="30%">Designation</td>#}
+{#                    <td width="30%">Joining Date</td>#}
+{#                </tr>#}
+{#                </thead>#}
+{#                <tbody>#}
+{#                <tr>#}
+{#                    <td>response_json.employee_id </td>#}
+{#                    <td>response_json </td>#}
+{#                    <td>response_json </td>#}
+{#                    <td>response_json </td>#}
+{#                </tr>#}
+{#                </tbody>#}
+{#                <thead style="padding: 3px;height: auto;width: 100%;background-color: #ffd84e">#}
+{#                <tr style="width: 100%">#}
+{#                    <td width="10%">Emp ID</td>#}
+{#                    <td width="30%">Name</td>#}
+{#                    <td width="30%">Designation</td>#}
+{#                    <td width="30%">Joining Date</td>#}
+{#                </tr>#}
+{#                </thead>#}
+{#                <tbody>#}
+{#                <tr>#}
+{#                    <td>response_json </td>#}
+{#                    <td>response_json </td>#}
+{#                    <td>response_json </td>#}
+{#                    <td>response_json </td>#}
+{#                </tr>#}
+{#                </tbody>#}
+{#            </table>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+</body>
+</html>

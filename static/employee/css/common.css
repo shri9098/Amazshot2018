@@ -1,0 +1,127 @@
+
+/* Spinner (Loader) Color */
+.spinner-layer{
+    border-color: #045F75;
+}
+
+#header_menu #menu_web li a{
+    color: #388492;
+}
+
+#header_menu ul li a:hover{
+    color: #F3BE00 !important;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+.btn{
+background-color:#388492 !important;
+}
+.btn:hover{
+color: #ffaa2a !important;
+
+}
+/*----------Custmization of Modal--------------*/
+.modal{
+    background-color: #F3BE00;
+    padding: 2px;
+   width: 50% !important;
+    top: 30% !important;
+}
+@media only screen and (max-width: 600px){
+    .modal{
+        width: 80% !important;
+    }
+}
+.modal .modal-content{
+    background-color: #F2F7F3;
+}
+.modal .modal-footer{
+    background-color: #F2F7F3;
+}
+body{
+    background-color: #fff7dc;
+}
+
+/******************************************************************/
+/*--------------------------- header main ------------------------*/
+/*******************************************************************/
+nav{
+    background-color: #654236;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: 10vh;
+    line-height: 10vh;
+}
+nav > .nav-wrapper{
+    height: 100%;
+    line-height: inherit;
+}
+nav > .nav-wrapper > a{
+    height:inherit;
+}
+nav > .nav-wrapper > ul.left{
+    height:inherit;
+    line-height: inherit;
+}
+nav > .nav-wrapper > a > h5{
+    display: inline-block;
+    vertical-align: middle;
+	margin: 14px 0 16px;
+}
+nav > .nav-wrapper > ul.left > li{
+    /*padding: 3px;*/
+    height:inherit;
+}
+nav > .nav-wrapper > ul.left:nth-of-type(2) > li > a{
+    height: inherit;
+}
+nav > .nav-wrapper > ul.left:nth-of-type(2) > li > a:hover{
+    background-color: transparent;
+}
+nav > .nav-wrapper > ul.left:nth-of-type(2) > li > a > img{
+    height: 8vh;
+    margin: 6px 3px 3px 6px;
+}
+nav > .nav-wrapper > ul.left > li > h5{
+    margin: 1.6rem 0.5em;
+}
+nav > .nav-wrapper > ul.left > li > a.button-collapse{
+    height: inherit;
+    line-height: inherit;
+}
+nav > .nav-wrapper > ul.left > li > a.button-collapse > i{
+    height: inherit;
+    line-height: inherit;
+}
+nav > .nav-wrapper > ul.right{
+    height: inherit;
+    line-height: inherit;
+}
+nav > .nav-wrapper > ul.right > li{
+    line-height: inherit;
+    height: inherit;
+    text-transform: uppercase;
+}
+nav > .nav-wrapper > ul.right > li > a > i{
+    height: inherit;
+        line-height: inherit;
+}
+@media only screen and (max-width: 601px){
+    nav > .nav-wrapper, nav > .nav-wrapper > i, nav > a.button-collapse, nav > a.button-collapse > i{
+        height: inherit;
+        line-height: inherit;
+    }
+}
+
+/*----------------------------- Slide Out ------------------------*/
+ul#slide-out > li{
+	border-bottom: 1px solid #EFC849;
+}
+
+ul#slide-out > li > a > i{
+	color: #654236;
+}
+
